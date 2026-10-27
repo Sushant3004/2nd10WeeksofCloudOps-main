@@ -31,6 +31,17 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose version
 
 ```
+
+Download buildx 0.38.1
+
+```
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+sudo curl -fSL https://github.com/docker/buildx/releases/download/v0.38.1/buildx-v0.38.1.linux-amd64 \
+  -o /usr/local/lib/docker/cli-plugins/docker-buildx
+sudo chown root:root /usr/local/lib/docker/cli-plugins/docker-buildx
+sudo chmod 755 /usr/local/lib/docker/cli-plugins/docker-buildx
+```
+
 -- after above process clone the repo by follwing command
 ```sh   
 git clone https://github.com/CloudTechDevOps/2nd10WeeksofCloudOps-main.git
